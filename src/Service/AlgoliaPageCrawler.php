@@ -81,7 +81,7 @@ class AlgoliaPageCrawler
         Requirements::clear();
 
         $controller = ModelAsController::controller_for($this->item);
-        $current = Controller::has_curr() ? Controller::curr() : null;
+        $current = Controller::curr() ?? null;
 
         if ($current) {
             $controller->setRequest($current->getRequest());
